@@ -15,15 +15,15 @@
 
 # decohints
 
-<a href="https://github.com/gri-gus/decohints/blob/main/README.ru.md" target="_blank"><b>🇷🇺 Версия на русском</b></a>
+<a href="https://github.com/gri-gus/decohints/blob/main/README.md" target="_blank"><b>🇺🇸 English version</b></a>
 
-A decorator for decorators that allows you to see the parameters of a decorated function when using it in PyCharm.
+Декоратор для декораторов, который позволяет видеть параметры задекорированной функции при ее использовании в PyCharm.
 
 **PyPi**: https://pypi.org/project/decohints/
 
-## Reasons for creation
+## Причины создания
 
-Below is an example of a decorator with parameters without the use of `decohints`:
+Ниже показан пример декоратора с параметрами, без использования `decohints`:
 
 ```python
 from functools import wraps
@@ -50,33 +50,33 @@ def test(a: int, b: int) -> int:
     return a + b
 ```
 
-If you type below `test()` in PyCharm and wait, it will show decorator wrapper parameter hints as `test` function
-parameter hints:
+Если ввести ниже `test()` в PyCharm и подождать, то он подскажет параметры обертки в декораторе как параметры
+функции `test`:
 
 <img width="150" height="105" src="https://raw.githubusercontent.com/gri-gus/decohints/main/assets/images/1.png" alt="test() (*args, **kwargs)">
 
-This is not convenient and can confuse developers, which is why this library was made.
+Это не удобно и может запутать разработчиков, поэтому была сделана эта библиотека.
 
-## Installation
+## Установка
 
 ```shell
 pip install decohints
 ```
 
-## Usage
+## Использование
 
-> ✅ Works with all kinds of decorators \
-> ⚠️ If your decorator is already wrapped in another decorator, then `decohints` should be on top
+> ✅ Работает со всеми видами декораторов \
+> ⚠️ Если ваш декоратор уже обернут в другой декоратор, то `decohints` должен быть верхним
 
-To use, you need to follow two simple steps:
+Чтобы воспользоваться, нужно выполнить два простых шага:
 
-1. Import the `decohints` decorator from the `decohints` library:
+1. Импортировать декоратор `decohints` из библиотеки `decohints`:
 
 ```python
 from decohints import decohints
 ```
 
-2. Wrap your decorator with a `decohints` decorator:
+2. Обернуть свой декоратор декоратором `decohints`:
 
 ```python
 @decohints
@@ -84,7 +84,7 @@ def your_decorator():
     ...
 ```
 
-The following is an example of a decorator with parameters, with using `decohints`:
+Ниже показан пример декоратора с параметрами, с использованием `decohints`:
 
 ```python
 from functools import wraps
@@ -111,22 +111,22 @@ def test(a: int, b: int) -> int:
     return a + b
 ```
 
-If you type below `test()` in PyCharm and wait, it will show `test` function parameter hints:
+Если ввести ниже `test()` в PyCharm и подождать, то он подскажет параметры функции `test`:
 
 <img width="150" height="105" src="https://raw.githubusercontent.com/gri-gus/decohints/main/assets/images/2.png" alt="test() (a: int, b: int)">
 
-> ❕Examples of use with decorator class, class decorators, and more are found at here:
+> ❕Примеры использования с классами-декораторами, декораторами классов и другие находятся тут:
 <a href="https://github.com/gri-gus/decohints/tree/main/examples/decohints" target="_blank"><b>click</b></a>
 
-## Alternatives
+## Альтернативные решения
 
-### Specifying the type of wrapper
+### Указание типа wrapper
 
-> ✅ Works with all kinds of decorator functions
+> ✅ Работает со всеми видами функций-декораторов
 
-Specifying the type `wrapper: func` will have the same behavior as using `decohints`.
+Если указать тип `wrapper: func`, то будет такое же поведение, как с использованием `decohints`.
 
-Example:
+Пример:
 
 ```python
 from functools import wraps
@@ -151,18 +151,18 @@ def test(a: int, b: int) -> int:
     return a + b
 ```
 
-If you type below `test()` in PyCharm and wait, it will show `test` function parameter hints:
+Если ввести ниже `test()` в PyCharm и подождать, то он подскажет параметры функции `test`:
 
 <img width="150" height="105" src="https://raw.githubusercontent.com/gri-gus/decohints/main/assets/images/2.png" alt="test() (a: int, b: int)">
 
-### Specifying an output type in a decorator with parameters
+### Указание выходного типа в декораторе с параметрами
 
-> ❗️This method only works in decorator functions with parameters
+> ❗️Данный способ работает только в функциях-декораторах с параметрами
 
-If you specify the `Callable` type from the `typing` module for the result of the decorator with parameters, then the
-behavior will be the same as using `decohints`.
+Если указать тип `Callable` из модуля `typing` для результата декоратора с параметрами, то будет такое же поведение, как
+с использованием `decohints`.
 
-Example:
+Пример:
 
 ```python
 from functools import wraps
@@ -190,6 +190,6 @@ def test(a: int, b: int) -> int:
     return a + b
 ```
 
-If you type below `test()` in PyCharm and wait, it will show `test` function parameter hints:
+Если ввести ниже `test()` в PyCharm и подождать, то он подскажет параметры функции `test`:
 
 <img width="150" height="105" src="https://raw.githubusercontent.com/gri-gus/decohints/main/assets/images/2.png" alt="test() (a: int, b: int)">
