@@ -8,7 +8,7 @@ A decorator for decorators that allows you to see the parameters of a decorated 
 
 **PyPi**: https://pypi.org/project/decohints/
 
-## Reasons for the appearance
+## Reasons for creation
 
 Below is an example of a decorator with parameters without the use of `decohints`:
 
@@ -103,11 +103,14 @@ If you type below `test()` in PyCharm and wait, it will show `test` function par
 
 <img width="150" height="105" src="https://github.com/gri-gus/decohints/blob/main/assets/images/2.png?raw=true" alt="test() (a: int, b: int)">
 
+❕Examples of use with decorator class, class decorators, and more are found at
+here: [click](https://github.com/gri-gus/decohints/tree/main/examples/decohints)
+
 ## Alternatives
 
 ### Specifying the type of wrapper
 
-✅ Works with all kinds of decorators
+✅ Works with all kinds of decorator functions
 
 Specifying the type `wrapper: func` will have the same behavior as using `decohints`.
 
@@ -142,7 +145,7 @@ If you type below `test()` in PyCharm and wait, it will show `test` function par
 
 ### Specifying an output type in a decorator with parameters
 
-❗️This method only works in decorators with parameters.
+❗️This method only works in decorator functions with parameters
 
 If you specify the `Callable` type from the `typing` module for the result of the decorator with parameters, then the
 behavior will be the same as using `decohints`.
