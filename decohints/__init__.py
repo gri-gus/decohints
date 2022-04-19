@@ -1,1 +1,1 @@
-from .main import decohints
+from .main import decohints, endpoint_decohints
