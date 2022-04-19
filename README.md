@@ -1,3 +1,5 @@
+![decohints](https://github.com/gri-gus/decohints/blob/main/assets/images/cover.png?raw=true)
+
 # decohints
 
 [🇺🇸 **English version**](README.eng.md)
