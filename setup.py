@@ -5,7 +5,7 @@ with open("PYPI_README.md", "r") as file:
 
 setuptools.setup(
     name="decohints",
-    version="1.0.1",
+    version="1.0.2",
     author="Grigoriy Gusev",
     author_email="thegrigus@gmail.com",
     description="A decorator for decorators that allows you to see the parameters of a decorated function when using it in PyCharm.",
