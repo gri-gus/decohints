@@ -1,11 +1,13 @@
 import setuptools
 
-with open("PYPI_README.md", "r") as file:
+VERSION = "1.0.4"
+
+with open("README.md", "r") as file:
     long_description = file.read()
 
 setuptools.setup(
     name="decohints",
-    version="1.0.2",
+    version=VERSION,
     author="Grigoriy Gusev",
     author_email="thegrigus@gmail.com",
     description="A decorator for decorators that allows you to see the parameters of a decorated function when using it in PyCharm.",
@@ -19,4 +21,17 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     python_requires='>=3.5',
+    license="Apache Software License",
+    keywords=[
+        "python",
+        "decorator",
+        "deco",
+        "decohints",
+        "hints",
+        "decor",
+        "decohint",
+        "python-decorator",
+        "helper",
+        "util"
+    ]
 )
