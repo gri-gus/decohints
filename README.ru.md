@@ -109,7 +109,7 @@ def decorator_with_params(aa=None, bb=None, cc=None):
     return _decorator
 
 
-@decorator_with_params
+@decorator_with_params()
 def test(a: int, b: int) -> int:
     return a + b
 ```
