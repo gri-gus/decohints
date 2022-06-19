@@ -1,6 +1,6 @@
 import setuptools
 
-VERSION = "1.0.4"
+VERSION = "1.0.5"
 
 with open("README.md", "r") as file:
     long_description = file.read()
@@ -15,6 +15,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/gri-gus/decohints",
     packages=setuptools.find_packages(),
+    package_data={"decohints": ["py.typed"]},
     classifiers=[
         "Programming Language :: Python :: 3.7",
         "License :: OSI Approved :: Apache Software License",
