@@ -1,8 +1,14 @@
 import setuptools
 
-VERSION = "1.0.7"
+VERSION = "1.0.8"
+PACKAGE_DIR = "src"
+REQUIREMENTS_FILE = PACKAGE_DIR + "/requirements.txt"
+README = "README.md"
 
-with open("README.md", "r") as file:
+with open(REQUIREMENTS_FILE, "r") as f:
+    requirements = f.read().splitlines()
+
+with open(README, "r") as file:
     long_description = file.read()
 
 setuptools.setup(
@@ -14,7 +20,8 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/gri-gus/decohints",
-    packages=setuptools.find_packages(),
+    packages=setuptools.find_packages(where=PACKAGE_DIR),
+    package_dir={"": PACKAGE_DIR},
     package_data={"decohints": ["py.typed"]},
     classifiers=[
         "Programming Language :: Python :: 3.7",

@@ -1,16 +1,19 @@
 <p align="center">
-<a>
-<img src="https://raw.githubusercontent.com/gri-gus/decohints/main/assets/images/cover.png" alt="decohints">
-</a>
+    <a>
+        <img src="https://raw.githubusercontent.com/gri-gus/decohints/main/assets/images/cover.png" alt="decohints">
+    </a>
 </p>
 
 <p align="center">
-<a href="https://pypi.org/project/decohints" target="_blank">
-<img src="https://img.shields.io/pypi/v/decohints" alt="PyPI">
-</a>
-<a href="https://pypi.org/project/decohints" target="_blank">
-<img src="https://img.shields.io/pypi/dm/decohints" alt="PyPI - Downloads">
-</a>
+    <a href="https://pypi.org/project/decohints" target="_blank">
+        <img src="https://img.shields.io/pypi/v/decohints" alt="PyPI">
+    </a>
+    <a href="https://pypi.org/project/decohints" target="_blank">
+        <img src="https://static.pepy.tech/badge/decohints" alt="PyPI">
+    </a>
+    <a href="https://opensource.org/licenses/Apache-2.0" target="_blank">
+        <img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="PyPI">
+    </a>
 </p>
 
 # decohints
@@ -73,7 +76,7 @@ pip install decohints
 1. Импортировать декоратор `decohints` из библиотеки `decohints`:
 
 ```python
-from decohints import decohints
+from src.decohints import decohints
 ```
 
 2. Обернуть свой декоратор декоратором `decohints`:
@@ -89,7 +92,7 @@ def your_decorator():
 ```python
 from functools import wraps
 
-from decohints import decohints
+from src.decohints import decohints
 
 
 @decohints
