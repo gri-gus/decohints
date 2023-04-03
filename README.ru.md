@@ -76,7 +76,7 @@ pip install decohints
 1. Импортировать декоратор `decohints` из библиотеки `decohints`:
 
 ```python
-from src.decohints import decohints
+from decohints import decohints
 ```
 
 2. Обернуть свой декоратор декоратором `decohints`:
@@ -92,7 +92,7 @@ def your_decorator():
 ```python
 from functools import wraps
 
-from src.decohints import decohints
+from decohints import decohints
 
 
 @decohints

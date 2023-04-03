@@ -76,7 +76,7 @@ To use, you need to follow two simple steps:
 1. Import the `decohints` decorator from the `decohints` library:
 
 ```python
-from src.decohints import decohints
+from decohints import decohints
 ```
 
 2. Wrap your decorator with a `decohints` decorator:
@@ -92,7 +92,7 @@ The following is an example of a decorator with parameters, with using `decohint
 ```python
 from functools import wraps
 
-from src.decohints import decohints
+from decohints import decohints
 
 
 @decohints
